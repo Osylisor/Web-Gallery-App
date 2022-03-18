@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+
+
+
+{% block title %}Add Album{% endblock %}
+
+
+
+{% block Content %}
+
+
+<h1 align = "center">New Album</h1>
+
+<div class="container">
+
+    <form action="" method="post" class ="form-control">
+
+
+        <!--Input field for email-->
+        <label for="album">New Album</label>
+        <input type="text" name="album-name" id="album" placeholder="Album Name">
+        <!--Add button-->
+        <input type="submit" value="Add" >
+      
+    
+
+    </form>
+
+
+</div>
+
+
+{% endblock %}

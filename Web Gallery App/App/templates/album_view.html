@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+
+{% block title%} View Album {% endblock %}
+
+
+{% block Content %}
+
+   <h1 align =  "center"> {{ gallery.gallery_name }}</h1>
+
+   <div class="image-container">
+
+      {% if not gallery.images %}
+            <h2>There are no images in this album, click <a href="/add_image/{{ gallery.id }}">here</a> to add one.</h2>
+      {% else %}
+
+            {% for image in gallery.images %}
+
+               
+               <a href="/view_image/{{ image.id }}">
+                  <img src="{{ url_for('static', filename = 'img/' + image.filename) }}" >
+               </a>
+      
+            {% endfor %}
+
+      {% endif %}
+
+   </div>
+
+{% endblock %}
