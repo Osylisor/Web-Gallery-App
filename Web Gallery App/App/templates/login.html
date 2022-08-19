@@ -11,28 +11,34 @@
 
     <div class="container">
 
-        <form action="" method="post" class ="form-control">
+        <div class = 'my-form'>
+
+            <form action="" method="post" class ="form-control">
 
 
-            <!--Input field for email-->
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+                <!--Input field for email-->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+    
+                <!--Input field for password-->
+                <label for="password">password</label>
+                <input type="password" name="password" id="password">
+    
+                <!--Submit button-->
+                <div align = "center">
+                    <input type="submit" value="Sign In" >
+                </div>
+                
+    
+    
+            </form>
+    
+    
+        </div>
 
-            <!--Input field for password-->
-            <label for="password">password</label>
-            <input type="password" name="password" id="password">
+        </div>
 
-            <!--Submit button-->
-            <div align = "center">
-                <input type="submit" value="Sign In" >
-            </div>
-            
-
-
-        </form>
-
-
-    </div>
+       
 
 
 {% endblock %}
