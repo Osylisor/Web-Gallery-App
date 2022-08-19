@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+
+
+{% block title %}View Image {% endblock %}
+
+
+
+{% block Content %}
+
+    <h1 align = "center">Image View</h1>
+
+
+    <div class="single-image-container">
+        <img src="{{ url_for('static', filename = 'img/' + image.filename) }}" alt="">
+    </div>
+
+    <div class="container">
+        <a class ='link-lime' href="/view_album/{{ image.gallery_id }}">Back</a>
+        <a class ='link-red' href="/delete_image/{{ image.id }}">Delete</a>
+    </div>
+
+
+{% endblock %}
